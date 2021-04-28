@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Intent</string>
+    <string name="outra_activity">Outra Activity</string>
+    <string name="outras_intents">Outras Intents</string>
+    <string name="navegador">Navegador</string>
+    <string name="liga_o">Ligação</string>
+    <string name="discador">Discador</string>
+    <string name="pegar_arquivo">Pegar arquivo</string>
+    <string name="escolher">Escolher</string>
+</resources>
