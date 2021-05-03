@@ -2,6 +2,7 @@ package br.edu.ifsp.scl.ads.pdm.intent;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -11,6 +12,8 @@ import br.edu.ifsp.scl.ads.pdm.intent.databinding.ActivityOutraBinding;
 public class OutraActivity extends AppCompatActivity {
 
     private ActivityOutraBinding activityOutraBinding;
+
+    public static final String RETORNO = "RETORNO";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -61,6 +64,11 @@ public class OutraActivity extends AppCompatActivity {
     }
 
     public void onClick(View view) {
+        // retornando para a main activity
+        Intent retornoIntent = new Intent();
+        retornoIntent.putExtra(RETORNO, activityOutraBinding.retornoEt.getText().toString());
+        setResult(RESULT_OK, retornoIntent);
+
         finish(); // Fecha a activity explicitamente  -> sequencia Onpause, Stop, Destroy
     }
 }
